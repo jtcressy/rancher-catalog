@@ -1,0 +1,7 @@
+name: Personal Final Project for Web I
+description: |
+  Dockerized my final project for a web design class, and now it's a rancher template!
+  Remember to pass the folder /jtcressy through a load balancer to link properly. you'll get error 403 if you try to access the root folder.
+version: 0.1.0
+category: Websites
+maintainer: jtcressy <joel@jtcressy.net>
