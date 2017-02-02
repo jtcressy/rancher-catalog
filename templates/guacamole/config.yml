@@ -1,0 +1,5 @@
+name: Guacamole RDP Proxy
+description: |
+  Apache Tomcat-based RDP Proxy using HTML5
+version: v0.9.9
+category: Services
