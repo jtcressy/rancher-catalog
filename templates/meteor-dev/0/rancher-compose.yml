@@ -1,9 +1,9 @@
-version: '2'
 .catalog:
   name: Meteor Dev
   description: |
     Development stack for meteor based on DanielDent/docker-meteor
   version: v0.1.0
+  minimum_rancher_version: v1.0.0
   questions:
     - variable: "app_name"
       description: "Enter a name if you want to create a new app, otherwise leave this blank. The meteor-create container will fail silently and that's ok."
