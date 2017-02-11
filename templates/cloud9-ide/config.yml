@@ -1,0 +1,5 @@
+name: Experimental Cloud9 SDK Cloud IDE
+description: |
+  Launch a cloud9 IDE workspace mountable to a workspace folder
+version: 0.1.0
+category: Services

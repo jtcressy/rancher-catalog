@@ -1,0 +1,44 @@
+version: '2'
+.catalog:
+  name: Meteor Dev
+  description: |
+    Development stack for meteor based on DanielDent/docker-meteor
+  version: v0.1.0
+  questions:
+    - variable: "app_name"
+      description: "Enter a name if you want to create a new app, otherwise leave this blank. The meteor-create container will fail silently and that's ok."
+      label: "New App Name:"
+      required: false
+      type: "string"
+    - variable: "meteor_port"
+      description: |
+        Published Port 
+      label: "Username:"
+      default: "3000"
+      required: true
+      type: "string"
+    - variable: "volume_name"
+      description: "Enter a storage volume location or name to store app"
+      label: "Storage Volume Name:"
+      required: false
+      type: "string"
+    - variable: "volume_driver"
+      description: "Select a volume driver to use as a backing for the storage volume"
+      label: "Select Storage Driver:"
+      type: enum
+      options:
+        - 
+        - rancher-nfs
+        - rancher-efs
+        - rancher-ebs
+        - convoy-nfs
+meteor:
+  scale: 1
+  retain_ip: true
+  health_check:
+    port: 3000
+    interval: 5000
+    unhealthy_threshold: 3
+    request_line: ''
+    healthy_threshold: 2
+    response_timeout: 5000

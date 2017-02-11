@@ -1,0 +1,5 @@
+name: MeteorJS Development Stack
+description: |
+  Launches the latest version of meteor in a container
+version: 0.1.0
+category: Services

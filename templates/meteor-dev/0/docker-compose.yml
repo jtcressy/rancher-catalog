@@ -1,0 +1,25 @@
+version: '2'
+volumes:
+    ${volume_name}:
+        external: true
+        driver: ${volume_driver}
+services:
+    meteor:
+        image: danieldent/meteor:latest
+        stdin_open: true
+        volumes:
+        - ${volume_name}:/app
+        tty: true
+        ports:
+        - ${meteor_port}:3000/tcp
+        labels:
+            io.rancher.sidekicks: meteor-create
+    meteor-create:
+        image: danieldent/meteor:latest
+        command: [meteor,create,${app_name}]
+        stdin_open: true
+        volumes: 
+        - ${volume_name}:/app
+        tty: true
+        labels:
+            io.rancher.container.start_once: 'true'
