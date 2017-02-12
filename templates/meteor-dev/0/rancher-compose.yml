@@ -43,3 +43,5 @@ meteor:
     request_line: ''
     healthy_threshold: 2
     response_timeout: 5000
+meteor-create:
+  scale: 1
